@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a; /* Defaulting to dark for that void feel */
+  --foreground: #ededed;
+}
+
+@theme {
+  /* Rugged Theme Colors */
+  --color-abyssinian-gold: #D4A76A;
+  --color-highland-green: #3D5A45;
+  --color-rugged-brown: #5D4037;
+
+  /* Map the Next.js font variables to Tailwind classes */
+  --font-pixel: var(--font-pixel), monospace;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular;
+}
+
+/* Custom "Voxel" Border Utility */
+@utility rugged-border {
+  border: 4px solid var(--color-abyssinian-gold);
+  box-shadow: 4px 4px 0px 0px #000;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  /* Use Sans for general text, we will use font-pixel for headings */
+  font-family: var(--font-geist-sans); 
+}
